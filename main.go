@@ -19,12 +19,6 @@ type Messenger struct {
 	Content   string `json:"content,omitempty"`
 }
 
-type Message struct {
-	Sender    string `json:"sender,omitempty"`
-	Recipient string `json:"recipient,omitempty"`
-	Content   string `json:"content,omitempty"`
-}
-
 var manager = ClientManager{
 	broadcast:  make(chan []byte),
 	register:   make(chan *Client),
